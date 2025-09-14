@@ -38,3 +38,13 @@ We implemented a prototype policy for SCTLR_EL1, which checks if the WXN (Write 
 There are some special registers that require specific configurations to be enabled. In our implementation, we invoked an empty SMC call to EL3 to account for the correct overhead, and we are writing to that register from Linux.Similarly, if other special registers are required, we can provide the appropriate parameters to Linux and to ARM Trusted Firmware to enable them, and we can also add them into the policy.
 
 Our system is developed on FVP and we ran and evaluated on RPi 3. To reproduce the numbers reported in the paper, the system must be run on Rpi 3 B+. 
+
+## Accessing FVP Terminals Without GUI
+
+When we run FVP using make run -j$(nproc), it generally spawns 4 FVP terminals. To access these terminals, a GUI is usually required. After booting up, you can run benchmark scripts in FVP terminal 0, where Linux boots.
+
+If a GUI is not available, you can still access these terminals via telnet. For example, when running FVP on a local machine, we used the following command (here, port 5000 corresponds to FVP terminal 0):
+```bash
+telnet localhost 5000
+```
+After Linux boots, you can run this command in any terminal to access FVP terminal 0. If you are unable to access the Linux terminal on port 5000, try other ports such as 5001, 5002, or 5003.
