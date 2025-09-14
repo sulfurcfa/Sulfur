@@ -41,7 +41,7 @@ Our system is developed on FVP and we ran and evaluated on RPi 3. To reproduce t
 
 ## Accessing FVP Terminals Without GUI
 
-When we run FVP using make run -j$(nproc), it generally spawns 4 FVP terminals. To access these terminals, a GUI is usually required. After booting up, you can run benchmark scripts in FVP terminal 0, where Linux boots.
+When we run FVP using build.sh script, it generally spawns 4 FVP terminals. To access these terminals, a GUI is usually required. After booting up, you can run benchmark scripts in FVP terminal 0, where Linux boots.
 
 If a GUI is not available, you can still access these terminals via telnet. For example, when running FVP on a local machine, we used the following command (here, port 5000 corresponds to FVP terminal 0):
 ```bash
