@@ -5,22 +5,31 @@ This repository contains the prototype implementaion for our paper Non-Bare-Meta
 We build our proof-of-concept implementation on top of OPTEE and FVP. The numbers reported in the paper were by evaluating on Rpi. For artifact evaluation, we are submitting the FVP. Though for reproducing the performance numbers, the system must be run on Rpi 3 B+. We are submitting a zip of our OPTEE setup because the OPTEE and FVP versions have been changed.
 
 # Steps to Build and run
-Please download the artifact zip from https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/nikitayadav_iisc_ac_in/EfYoWpJK_5FFq-EZTmKDeXQBlMiYWCb6L9J1c1Geg07NlQ?e=VfVTQ9 
+Please download the artifact zip from https://drive.usercontent.google.com/download?id=1sqYdrCiyJ3Q7mwFQG5zvsz5k3-DpuRPd&export=download&authuser=0 
 Since it is quite big, we could not push it on github.
 
-1. Run install.sh script to install OPTEE pre-requisites.
 
+1. Copy the downloaded ZIP file into the `Sulfur` project directory.
+
+   ```bash
+   cp ~/Downloads/artifact.zip ~/Sulfur/
+   ```
+2. Give execute permissions to the build scripts:
+```bash
+ chmod 777 install.sh
+chmod 777 build.sh
+```
+3. After that run install.sh script to isntall prequesite.
 ```bash
 sudo ./install.sh
 ```
-
-2. Run build.sh to build OPTEE and FVP. Invoke this script with either "baseline" or "sulfur" to build baseline and sulfur respectively.
+4. Run build.sh to build OPTEE and FVP. Invoke this script with either "baseline" or "sulfur" to build baseline and sulfur respectively.
 
 ```bash
 sudo ./build.sh baseline/sulfur 
 ```
 
-3. The benchmarks can be run and tested via the FVP Xterminals. 
+5. The benchmarks can be run and tested via the FVP Xterminals. 
     3.1 Once the FVP is booted up, Go to terminal 0 and login as with "root"
     3.3 Run the following command in FVP terminal 0.
 
