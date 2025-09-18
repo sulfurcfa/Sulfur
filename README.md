@@ -5,8 +5,8 @@ This repository contains the prototype implementaion for our paper Non-Bare-Meta
 We build our proof-of-concept implementation on top of OPTEE and FVP. The numbers reported in the paper were by evaluating on Rpi. For artifact evaluation, we are submitting the FVP. Though for reproducing the performance numbers, the system must be run on Rpi 3 B+. We are submitting a zip of our OPTEE setup because the OPTEE and FVP versions have been changed.
 
 # Steps to Build and run
-Please download the artifact zip from (https://drive.usercontent.google.com/download?id=1Kuoln4mEMCSg6197LQUBK7S_fhh_MJ3M&export=download&authuser=0)
-The archive is around 5 GB, so we could not upload it to GitHub.
+Please download the artifact zip from https://drive.usercontent.google.com/download?id=1Kuoln4mEMCSg6197LQUBK7S_fhh_MJ3M&export=download&authuser=0.
+The archive is approximately 5 GB in size, so we were unable to upload it to GitHub.
 
 1. Copy the downloaded ZIP file into the `Sulfur` project directory.
 
