@@ -5,7 +5,7 @@ This repository contains the prototype implementaion for our paper Non-Bare-Meta
 We build our proof-of-concept implementation on top of OPTEE and FVP. The numbers reported in the paper were by evaluating on Rpi. For artifact evaluation, we are submitting the FVP. Though for reproducing the performance numbers, the system must be run on Rpi 3 B+. We are submitting a zip of our OPTEE setup because the OPTEE and FVP versions have been changed.
 
 # Steps to Build and run
-Please download the artifact zip from https://drive.usercontent.google.com/download?id=1sqYdrCiyJ3Q7mwFQG5zvsz5k3-DpuRPd&export=download&authuser=0 
+Please download the artifact zip from (https://drive.usercontent.google.com/download?id=1Kuoln4mEMCSg6197LQUBK7S_fhh_MJ3M&export=download&authuser=0)
 Since it is quite big, we could not push it on github.
 
 
