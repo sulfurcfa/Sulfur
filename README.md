@@ -30,8 +30,8 @@ sudo ./build.sh baseline/sulfur
 ```
 
 5. The benchmarks can be run and tested via the FVP Xterminals. 
-    3.1 Once the FVP is booted up, Go to terminal 0 and login as with "root"
-    3.3 Run the following command in FVP terminal 0.
+    3.1 Once the FVP is booted up, Go to terminal 0 and login as with "root".
+    Run the following command in FVP terminal 0.
 
 ```bash
 cd /usr/bin
