@@ -11,15 +11,15 @@ Since it is quite big, we could not push it on github.
 
 1. Copy the downloaded ZIP file into the `Sulfur` project directory.
 
-   ```bash
-   cp ~/Downloads/artifact.zip ~/Sulfur/
-   ```
+```bash
+cp ~/Downloads/artifact.zip ~/Sulfur/
+```
 2. Give execute permissions to the build scripts:
 ```bash
- chmod 777 install.sh
+chmod 777 install.sh
 chmod 777 build.sh
 ```
-3. After that run install.sh script to isntall prequesite.
+3. Run the installer script to install all prerequisites.
 ```bash
 sudo ./install.sh
 ```
