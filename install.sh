@@ -57,6 +57,7 @@ sudo  apt-get install -y \
     xterm \
     xz-utils \
     zlib1g-dev \
-    unzip
+    unzip \ 
+    python2
 
 unzip  artifact.zip
