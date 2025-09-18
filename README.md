@@ -38,21 +38,11 @@ sh run.sh [baseline|sulfur]
 ```
 
 ## Implementation details
-We have developed a proof-of-concept implementation of our system as described in the paper. Most of the modifications were made to Linux and ARM Trusted Firmware (ARM-TF).
-
-In Linux, we added support for system configuration protection, introduced Sulfur gates to save and restore process context, and simulated page fault overheads by invoking SMC calls in the page fault handler.
-
-In ARM-TF, we implemented our Sulfur monitor handler, which writes to system registers and enforces policies. On the Raspberry Pi 3B+ platform, we were able to map the Normal World (NW) memory to the Secure World (SW) and update the NW memory from ARM-TF (via the Sulfur monitor).
-
-For FVP, we applied changes in ARM-TF to enable mapping of NW memory to SW. While we verified that the memory mapping was successful, we were not able to access NW memory directly from ARM-TF.
+We have developed a proof-of-concept implementation of our system as described in the paper. Most of the modifications were made to Linux and ARM Trusted Firmware (ARM-TF).In Linux, we added support for system configuration protection, introduced Sulfur gates to save and restore process context, and simulated page fault overheads by invoking SMC calls in the page fault handler.In ARM-TF, we implemented our Sulfur monitor handler, which writes to system registers and enforces policies. On the Raspberry Pi 3B+ platform, we were able to map the Normal World (NW) memory to the Secure World (SW) and update the NW memory from ARM-TF (via the Sulfur monitor).For FVP, we applied changes in ARM-TF to enable mapping of NW memory to SW. While we verified that the memory mapping was successful, we were not able to access NW memory directly from ARM-TF.
 
 
 We have implemented protection for system configuration as described below.
-To achieve this, we replaced MSR instructions with SMC calls. There are a few corner cases where these calls could not be replaced. In the SMC handler, we defined policy logic prototypes for each system register.
-
-As a prototype, we implemented a policy for SCTLR_EL1, which checks whether the WXN (Write XOR eXecute) bit is enabled. If the policy check passes, the write is permitted and carried out from the SMC handler. This ensures that the kernel cannot directly write to any system registers.
-
-Some special registers require specific configurations to be enabled. In our implementation, we invoked an empty SMC call to EL3 to correctly account for the overhead, while the actual write is still performed from Linux. Similarly, if other special registers are required, we can provide the necessary parameters to Linux and ARM Trusted Firmware to enable them, and extend the policy accordingly.
+To achieve this, we replaced MSR instructions with SMC calls. There are a few corner cases where these calls could not be replaced. In the SMC handler, we defined policy logic prototypes for each system register. As a prototype, we implemented a policy for SCTLR_EL1, which checks whether the WXN (Write XOR eXecute) bit is enabled. If the policy check passes, the write is permitted and carried out from the SMC handler. This ensures that the kernel cannot directly write to any system registers.Some special registers require specific configurations to be enabled. In our implementation, we invoked an empty SMC call to EL3 to correctly account for the overhead, while the actual write is still performed from Linux. Similarly, if other special registers are required, we can provide the necessary parameters to Linux and ARM Trusted Firmware to enable them, and extend the policy accordingly.
 
 Our system was developed on FVP and evaluated on the Raspberry Pi 3. To reproduce the performance numbers reported in the paper, the system must be run on a Raspberry Pi 3 B+.
 
