@@ -8,7 +8,6 @@ We build our proof-of-concept implementation on top of OPTEE and FVP. The number
 Please download the artifact zip from (https://drive.usercontent.google.com/download?id=1Kuoln4mEMCSg6197LQUBK7S_fhh_MJ3M&export=download&authuser=0)
 Since it is quite big, we could not push it on github.
 
-
 1. Copy the downloaded ZIP file into the `Sulfur` project directory.
 
 ```bash
