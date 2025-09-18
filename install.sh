@@ -58,8 +58,5 @@ sudo  apt-get install -y \
     xz-utils \
     zlib1g-dev \
     unzip
-    
-sudo chmod 777 build.sh
-sudo chmod 777 install.sh
 
 unzip  artifact.zip
