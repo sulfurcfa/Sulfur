@@ -7,7 +7,7 @@ cd artifact
 if [ "$arg" = "baseline" ]; then
     echo "Building baseline code. THIS MAY TAKE TIME."
     cd build
-    sudo make all -j$(nproc)
+    sudo make  PYTHON=python2 all -j$(nproc)
 
 elif [ "$arg" = "sulfur" ]; then
     echo "Building sulfur code. THIS MAY TAKE TIME."
@@ -17,7 +17,7 @@ elif [ "$arg" = "sulfur" ]; then
     scripts/config --enable CONFIG_ARM64_BTI_PTR_AUTH_KERNEL
     scripts/config --enable CONFIG_ARM64_BTI_KERNEL
     cd ../build 
-    sudo make all -j$(nproc)
+    sudo make  PYTHON=python2 all -j$(nproc)
     
 else
     echo "Provide one of the two arguments:"
@@ -42,4 +42,4 @@ cp run.sh out-br/target/usr/bin
 echo "Building the filesystem with the changes and then runnig FVP again"
 
 cd build
-make run -j$(nproc)
+sudo make  PYTHON=python2  run -j$(nproc)
