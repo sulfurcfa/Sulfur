@@ -18,11 +18,13 @@ mechanisms.
 We provide a run.sh script to facilitate reproducing the results. For the baseline configuration,benchmarks can be executed using run.sh 
 baseline. In the FVP environment, the same procedure applies by invoking the script located at /usr/bin/run.sh with the same argument. An 
 identical workflow is used for executing Sulfur. The expected/ directory contains the reference outputs, including separate logs for both 
-the baseline and Sulfur runs. For detailed instructions on obtaining these results, please refer to Steps 4 and 5 of the Steps to Build and 
-Run section in the README.
+the baseline and Sulfur runs. For detailed instructions on obtaining these results, please refer to Steps 4 and 5 of the Steps to Build
+and Run section in the README.
 
 It is important to note that the results produced in the FVP environment differ from those reported in the paper.The measurements 
-presented in the paper were obtained on a Raspberry Pi 3 B+ platform, whereas the artifact is evaluated using the FVP setup. As a result, the performance numbers obtained in FVP are not expected to exactly match those reported in the paper. To reproduce the precise results, the implementation must be ported to the Raspberry Pi 3 B+. We are happy to provide guidance and support should reviewers wish to conduct 
+presented in the paper were obtained on a Raspberry Pi 3 B+ platform, whereas the artifact is evaluated using the FVP setup. As a result,
+the performance numbers obtained in FVP are not expected to exactly match those reported in the paper. To reproduce the precise results,
+the implementation must be ported to the Raspberry Pi 3 B+. We are happy to provide guidance and support should reviewers wish to conduct 
 experiments on Raspberry Pi.
 
 
