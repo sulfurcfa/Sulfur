@@ -17,16 +17,16 @@ cp ~/Downloads/artifact.zip ~/Sulfur/
 2. Give execute permissions to the build scripts:
 ```bash
 chmod 777 install.sh
-chmod 777 claim/run.sh
+chmod 777 build.sh
 ```
 3. Run the installer script to install all prerequisites.
 ```bash
 sudo ./install.sh
 ```
-4. Run claim/run.sh to build OPTEE and FVP. Invoke this script with either "baseline" or "sulfur" to build baseline and sulfur respectively.
+4. Run build.sh to build OPTEE and FVP. Invoke this script with either "baseline" or "sulfur" to build baseline and sulfur respectively.
 
 ```bash
-sudo sh claim/run.sh baseline/sulfur 
+sudo sh build.sh baseline/sulfur 
 ```
 
 5. The benchmarks can be run and tested via the FVP Xterminals. 
