@@ -1,0 +1,148 @@
+Running LmBench................
+Creating a 50MB file filled with zeros: 'largefile'...
+1+0 records in
+1+0 records out
+File 'largefile' created.
+
+Measuring system call latency: NULL
+Simple syscall: 23.0621 microseconds
+
+Measuring system call latency: READ on 'largefile'...
+Simple read: 25.1448 microseconds
+
+Measuring system call latency: WRITE on 'largefile'...
+Simple write: 24.6711 microseconds
+
+Measuring system call latency: STAT on 'largefile'...
+Simple stat: 42.1654 microseconds
+
+Measuring signal installation latency...
+Signal handler installation: 29.7567 microseconds
+
+Measuring context switch latency with 6 processes...
+
+"size=0k ovr=75.41
+6 82.91
+
+Measuring page fault latency with 'largefile'...
+Pagefaults on largefile: 13.2238 microseconds
+All latency tests completed.
+
+-------------------------------------------------
+Lmbench Table 
+
+Operation                           Latency (µs)
+------------------------------------------------
+Simple syscall (NULL)                   23.0621
+Simple read (on 'largefile')            25.1448
+Simple write (on 'largefile')           24.6711
+Simple stat (on 'largefile')            42.1654
+Signal handler installation             29.7567
+Context switch (6 processes, size=0k)   82.91   (ovr=75.41)
+Page fault (on 'largefile')             13.2238
+
+------------------------------------------------
+
+
+Running Embench....................
+Running basicmath_small:
+  Baseline time: 10.43
+  Blast time: 11.21
+
+Running crc_32:
+  Baseline time: 62.13
+  Blast time: 942.58
+
+Running libedn:
+  Baseline time: 106.38
+  Blast time: 328.46
+
+Running libhuffbench:
+  Baseline time: 59.11
+  Blast time: 215.26
+
+Running libminver:
+  Baseline time: 17.15
+  Blast time: 78.76
+
+Running libst:
+  Baseline time: 2.67
+  Blast time: 44.04
+
+Running libud:
+  Baseline time: 73.85
+  Blast time: 237.28
+
+Running matmult-int:
+  Baseline time: 116.63
+  Blast time: 349.54
+
+Running mont64:
+  Baseline time: 54.57
+  Blast time: 209.51
+
+Running nbody:
+  Baseline time: 1.68
+  Blast time: 4.99
+
+Running nettle-aes:
+  Baseline time: 67.41
+  Blast time: 100.75
+
+Running nettle-sha256:
+  Baseline time: 58.90
+  Blast time: 74.82
+
+Running primecount:
+  Baseline time: 66.79
+  Blast time: 254.54
+
+Running sglib-combined:
+  Baseline time: 68.28
+  Blast time: 475.74
+
+Running tarfind:
+  Baseline time: 16.91
+  Blast time: 207.55
+
+
+
+
+------------------------------------------
+Embench Table 
+
+Benchmark         Baseline (s)   Blast (s) 
+-------------------------------------------
+basicmath_small       10.43        11.21
+crc_32                62.13       942.58
+libedn               106.38       328.46
+libhuffbench          59.11       215.26
+libminver             17.15        78.76
+libst                  2.67        44.04
+libud                 73.85       237.28
+matmult-int          116.63       349.54
+mont64                54.57       209.51
+nbody                  1.68         4.99
+nettle-aes            67.41       100.75
+nettle-sha256         58.90        74.82
+primecount            66.79       254.54
+sglib-combined        68.28       475.74
+tarfind               16.91       207.55
+-------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
