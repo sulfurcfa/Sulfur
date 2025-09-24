@@ -1,7 +1,7 @@
 In paper Section 6 (Performance Evaluation), Figure 5 presents the performance results of Sulfur on the Embench-IoT benchmark suite. 
 Each data point represents the average of 10 runs, and the overall overhead is reported as the geometric mean of per-benchmark slowdown 
 ratios. The results show that Sulfur on Linux introduces only ~1.67% overhead relative to the baseline, indicating a negligible impact on 
-execution time. By contrast, CFA incurs substantially higher overheads, with ~59.88% on Linux and ~62.99% on Sulfur.Furthermore,CFA-Sulfur
+execution time.By contrast, CFA incurs substantially higher overheads,with ~59.88% on Linux and ~62.99% on Sulfur.Furthermore,CFA-Sulfur
 demonstrates only a modest additional slowdown of ~1.94% compared to CFA-Linux. These findings clearly suggest that the performance 
 degradation is primarily attributed to CFA, while Sulfur itself imposes virtually no measurable overhead.
 
@@ -21,10 +21,8 @@ identical workflow is used for executing Sulfur. The expected/ directory contain
 the baseline and Sulfur runs. For detailed instructions on obtaining these results, please refer to Steps 4 and 5 of the Steps to Build and 
 Run section in the README.
 
-It is important to note that the results produced in the FVP environment differ from those reported in the paper.The measurements presented
-in the paper were obtained on a Raspberry Pi 3 B+ platform, whereas the artifact is evaluated using the FVP setup. As a result, the 
-performance numbers obtained in FVP are not expected to exactly match those reported in the paper. To reproduce the precise results, the 
-implementation must be ported to the Raspberry Pi 3 B+. We are happy to provide guidance and support should reviewers wish to conduct 
+It is important to note that the results produced in the FVP environment differ from those reported in the paper.The measurements 
+presented in the paper were obtained on a Raspberry Pi 3 B+ platform, whereas the artifact is evaluated using the FVP setup. As a result, the performance numbers obtained in FVP are not expected to exactly match those reported in the paper. To reproduce the precise results, the implementation must be ported to the Raspberry Pi 3 B+. We are happy to provide guidance and support should reviewers wish to conduct 
 experiments on Raspberry Pi.
 
 
