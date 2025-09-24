@@ -21,8 +21,7 @@ identical workflow is used for executing Sulfur. The expected/ directory contain
 the baseline and Sulfur runs. For detailed instructions on obtaining these results, please refer to Steps 4 and 5 of the Steps to Build
 and Run section in the README.
 
-It is important to note that the results produced in the FVP environment differ from those reported in the paper.The measurements 
-presented in the paper were obtained on a Raspberry Pi 3 B+ platform, whereas the artifact is evaluated using the FVP setup. As a result,
-the performance numbers obtained in FVP are not expected to exactly match those reported in the paper. To reproduce the precise results,
-the implementation must be ported to the Raspberry Pi 3 B+. We are happy to provide guidance and support should reviewers wish to conduct 
-experiments on Raspberry Pi.
+It is important to note that the results provided in the expected/ directory were obtained in the FVP environment, whereas the results
+presented in the paper were measured on a Raspberry Pi 3 B+ platform. Therefore, the performance numbers produced in FVP are not expected 
+to exactly match those reported in the paper. To reproduce the precise results from the paper, the implementation must be ported to the 
+Raspberry Pi 3 B+. We are happy to provide guidance and support should reviewers wish to conduct experiments on Raspberry Pi.
