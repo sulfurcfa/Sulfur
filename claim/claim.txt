@@ -1,11 +1,31 @@
-In paper Section 6 (Performance Evaluation), Figure 5 presents the performance results of Sulfur on the Embench-IoT benchmark suite. Each data point represents the average of 10 runs, and the overall overhead is reported as the geometric mean of per-benchmark slowdown ratios. The results show that Sulfur on Linux introduces only ~1.67% overhead relative to the baseline, indicating a negligible impact on execution time. By contrast, CFA incurs substantially higher overheads, with ~59.88% on Linux and ~62.99% on Sulfur. Furthermore, CFA-Sulfur demonstrates only a modest additional slowdown of ~1.94% compared to CFA-Linux. These findings clearly suggest that the performance degradation is primarily attributed to CFA, while Sulfur itself imposes virtually no measurable overhead.
+In paper Section 6 (Performance Evaluation), Figure 5 presents the performance results of Sulfur on the Embench-IoT benchmark suite. 
+Each data point represents the average of 10 runs, and the overall overhead is reported as the geometric mean of per-benchmark slowdown 
+ratios. The results show that Sulfur on Linux introduces only ~1.67% overhead relative to the baseline, indicating a negligible impact on 
+execution time. By contrast, CFA incurs substantially higher overheads, with ~59.88% on Linux and ~62.99% on Sulfur. Furthermore, CFA-Sulfur
+demonstrates only a modest additional slowdown of ~1.94% compared to CFA-Linux. These findings clearly suggest that the performance 
+degradation is primarily attributed to CFA, while Sulfur itself imposes virtually no measurable overhead.
 
-In paper Section 6 (Performance Evaluation), Figure 7 reports the overhead incurred by Sulfur on system operations, as measured using LMBench micro-benchmarks. The results indicate substantial increases in system call and kernel operation latencies compared to Linux. For instance, the null system call shows the highest overhead at ~452.81%, while operations such as read (~281.94%), write (~308.40%), and signal handler installation (~259.21%) also experience significant slowdowns. Moderate overheads are observed for stat (~58.81%), open/close (~76.77%), and signal dispatch (~56.52%), whereas page faults incur the lowest overhead at ~35.50%. Context switching overhead is ~108.58%, reflecting the additional scheduling complexity introduced by Sulfur. Overall, these results show that while Sulfur maintains functional correctness, it introduces considerable latency in low-level system operations due to its additional safety and monitoring mechanisms.
+In paper Section 6 (Performance Evaluation), Figure 7 reports the overhead incurred by Sulfur on system operations, as measured using 
+LMBench micro-benchmarks. The results indicate substantial increases in system call and kernel operation latencies compared to Linux. For 
+instance, the null system call shows the highest overhead at ~452.81%, while operations such as read (~281.94%), write (~308.40%), and 
+signal handler installation (~259.21%) also experience significant slowdowns. Moderate overheads are observed for stat (~58.81%), 
+open/close (~76.77%), and signal dispatch (~56.52%), whereas page faults incur the lowest overhead at ~35.50%. Context switching overhead 
+is ~108.58%, reflecting the additional scheduling complexity introduced by Sulfur. Overall, these results show that while Sulfur maintains 
+functional correctness, it introduces considerable latency in low-level system operations due to its additional safety and monitoring 
+mechanisms.
 
 
-We provide a run.sh script to facilitate reproducing the results. For the baseline configuration, benchmarks can be executed using run.sh baseline. In the FVP environment, the same procedure applies by invoking the script located at /usr/bin/run.sh with the same argument. An identical workflow is used for executing Sulfur. The expected/ directory contains the reference outputs, including separate logs for both the baseline and Sulfur runs. For detailed instructions on obtaining these results, please refer to Steps 4 and 5 of the Steps to Build and Run section in the README.
+We provide a run.sh script to facilitate reproducing the results. For the baseline configuration, benchmarks can be executed using run.sh 
+baseline. In the FVP environment, the same procedure applies by invoking the script located at /usr/bin/run.sh with the same argument. An 
+identical workflow is used for executing Sulfur. The expected/ directory contains the reference outputs, including separate logs for both 
+the baseline and Sulfur runs. For detailed instructions on obtaining these results, please refer to Steps 4 and 5 of the Steps to Build and 
+Run section in the README.
 
-It is important to note that the results produced in the FVP environment differ from those reported in the paper. The measurements presented in the paper were obtained on a Raspberry Pi 3 B+ platform, whereas the artifact is evaluated using the FVP setup. As a result, the performance numbers obtained in FVP are not expected to exactly match those reported in the paper. To reproduce the precise results, the implementation must be ported to the Raspberry Pi 3 B+. We are happy to provide guidance and support should reviewers wish to conduct experiments on Raspberry Pi.
+It is important to note that the results produced in the FVP environment differ from those reported in the paper. The measurements presented
+in the paper were obtained on a Raspberry Pi 3 B+ platform, whereas the artifact is evaluated using the FVP setup. As a result, the 
+performance numbers obtained in FVP are not expected to exactly match those reported in the paper. To reproduce the precise results, the 
+implementation must be ported to the Raspberry Pi 3 B+. We are happy to provide guidance and support should reviewers wish to conduct 
+experiments on Raspberry Pi.
 
 
 Please run the run.sh script in /usr/bin folder FVP terminal 0 for running the Lmbench and Embench benchmarks.
