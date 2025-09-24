@@ -1,0 +1,132 @@
+Running LmBench................
+Creating a 50MB file filled with zeros: 'largefile'...
+1+0 records in
+1+0 records out
+File 'largefile' created.
+
+Measuring system call latency: NULL
+Simple syscall: 22.8992 microseconds
+
+Measuring system call latency: READ on 'largefile'...
+Simple read: 25.1364 microseconds
+
+Measuring system call latency: WRITE on 'largefile'...
+Simple write: 24.6071 microseconds
+
+Measuring system call latency: STAT on 'largefile'...
+Simple stat: 41.8947 microseconds
+
+Measuring signal installation latency...
+Signal handler installation: 29.7540 microseconds
+
+Measuring context switch latency with 6 processes...
+
+"size=0k ovr=75.30
+6 79.20
+
+Measuring page fault latency with 'largefile'...
+Pagefaults on largefile: 13.2295 microseconds
+
+All latency tests completed.
+
+----------------------------------------------
+Lmbench Table
+
+Operation                           Latency (µs)
+------------------------------------------------
+Simple syscall (NULL)                   22.8992
+Simple read (on 'largefile')            25.1364
+Simple write (on 'largefile')           24.6071
+Simple stat (on 'largefile')            41.8947
+Signal handler installation             29.7540
+Context switch (6 processes, size=0k)   79.20   (ovr=75.30)
+Page fault (on 'largefile')             13.2295
+------------------------------------------------
+
+
+Running Embench....................
+Running basicmath_small:
+  Baseline time: 10.43
+  Blast-Sulfur time: 11.20
+
+Running crc_32:
+  Baseline time: 62.15
+  Blast-Sulfur time: 942.57
+
+Running libedn:
+  Baseline time: 106.38
+  Blast-Sulfur time: 328.55
+
+Running libhuffbench:
+  Baseline time: 59.12
+  Blast-Sulfur time: 215.25
+
+Running libminver:
+  Baseline time: 17.15
+  Blast-Sulfur time: 78.76
+
+Running libst:
+  Baseline time: 2.67
+  Blast-Sulfur time: 44.02
+
+Running libud:
+  Baseline time: 73.85
+  Blast-Sulfur time: 237.32
+
+Running matmult-int:
+  Baseline time: 116.65
+  Blast-Sulfur time: 349.55
+
+Running mont64:
+  Baseline time: 54.56
+  Blast-Sulfur time: 209.54
+
+Running nbody:
+  Baseline time: 1.68
+  Blast-Sulfur time: 4.99
+
+Running nettle-aes:
+  Baseline time: 67.38
+  Blast-Sulfur time: 100.76
+
+Running nettle-sha256:
+  Baseline time: 58.92
+  Blast-Sulfur time: 74.85
+
+Running primecount:
+  Baseline time: 66.76
+  Blast-Sulfur time: 254.61
+
+Running sglib-combined:
+  Baseline time: 68.30
+  Blast-Sulfur time: 475.74
+
+Running tarfind:
+  Baseline time: 16.90
+  Blast-Sulfur time: 207.48
+
+
+--------------------------------------------------------------
+Embench Table 
+
+Benchmark         Baseline (s)   Blast-Sulfur (s)   Overhead (%)
+---------------------------------------------------------------
+basicmath_small       10.43          11.20              7.39
+crc_32                62.15         942.57           1416.30
+libedn               106.38         328.55            208.84
+libhuffbench          59.12         215.25            264.17
+libminver             17.15          78.76            359.38
+libst                  2.67          44.02           1548.69
+libud                 73.85         237.32            221.40
+matmult-int          116.65         349.55            199.64
+mont64                54.56         209.54            283.99
+nbody                  1.68           4.99            197.32
+nettle-aes            67.38         100.76             49.56
+nettle-sha256         58.92          74.85             27.04
+primecount            66.76         254.61            281.41
+sglib-combined        68.30         475.74            596.04
+tarfind               16.90         207.48           1127.99
+---------------------------------------------------------------
+
+
+  
