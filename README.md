@@ -23,7 +23,7 @@ chmod 777 claim/run.sh
 ```bash
 sudo ./install.sh
 ```
-4. Run build.sh to build OPTEE and FVP. Invoke this script with either "baseline" or "sulfur" to build baseline and sulfur respectively.
+4. Run claim/run.sh to build OPTEE and FVP. Invoke this script with either "baseline" or "sulfur" to build baseline and sulfur respectively.
 
 ```bash
 sudo sh claim/run.sh baseline/sulfur 
