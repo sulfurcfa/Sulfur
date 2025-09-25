@@ -61,5 +61,3 @@ sudo  apt-get install -y \
     python2
 
 unzip  artifact.zip
-
-cp claim/run.sh artifact/run.sh
