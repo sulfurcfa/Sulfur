@@ -28,6 +28,7 @@ sudo ./install.sh
 Running build.sh will build the required components (Linux, ARM Trusted Firmware, OP-TEE OS, etc.) depending on the selected mode.
 
 Baseline mode: Builds only the standard Linux system.
+
 Sulfur mode: Builds ARM Trusted Firmware, OP-TEE OS (Trusted Zone), and a modified Linux kernel.
 
 At the end of the build, the FVP terminals will be launched.
@@ -39,10 +40,11 @@ To build OP-TEE and FVP, run:
 sudo sh ./build.sh baseline   # for baseline mode
 sudo sh ./build.sh sulfur     # for sulfur mode
 ```
+### Step 5: Run Benchmarks in FVP
+The benchmarks can be run and tested via the FVP XTerminals. 
+Once the FVP is booted, go to terminal 0 and log in as "root". 
 
-5. The benchmarks can be run and tested via the FVP Xterminals. 
-Once the FVP is booted up, Go to terminal 0 and login as with "root".
-Run the following command in FVP terminal 0.
+Run the following command in FVP terminal 0 to execute the two benchmarks (lmbench and embench) for the selected mode:
 
 ```bash
 cd /usr/bin
