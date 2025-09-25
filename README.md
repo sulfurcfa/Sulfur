@@ -28,6 +28,7 @@ sudo ./install.sh
 Running build.sh will build the required components.
 
 Baseline mode: Builds the vanilla OP-TEE setup for FVP with the standard OP-TEE OS, ARM Trusted Firmware, and Linux kernel.
+
 Sulfur mode: Builds the OP-TEE setup for FVP with modified OP-TEE OS, ARM Trusted Firmware, and Linux kernel used in Sulfur.
 
 
