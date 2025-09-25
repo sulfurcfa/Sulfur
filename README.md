@@ -8,9 +8,8 @@ We built our proof-of-concept implementation on top of OP-TEE and the ARM FVP pl
 Please download the artifact zip from https://drive.usercontent.google.com/download?id=1Kuoln4mEMCSg6197LQUBK7S_fhh_MJ3M&export=download&authuser=0.
 
 The archive is approximately 5 GB in size, so we were unable to upload it to GitHub.
-
-1. Copy the downloaded ZIP file into the `Sulfur` project directory.
-
+### Step 1: Place the Artifact in the Project Directory
+Copy the downloaded ZIP file into the `Sulfur` project directory.
 ```bash
 cp ~/Downloads/artifact.zip ~/Sulfur/
 ```
