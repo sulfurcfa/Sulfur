@@ -14,9 +14,14 @@ is ~108.58%, reflecting the additional scheduling complexity introduced by Sulfu
 functional correctness, it introduces considerable latency in low-level system operations due to its additional safety and monitoring 
 mechanisms.
 
-We provide a build.sh script for building the FVP machine with the appropriate configuration (either baseline or Sulfur). For the baseline configuration, benchmarks can be executed using build.sh baseline, and for Sulfur, the argument sulfur should be passed instead (see Step 4 of the Steps to Build and Run section in the README).
+We provide a build.sh script for building the FVP machine with the appropriate configuration (either baseline or Sulfur). For the baseline
+configuration, benchmarks can be executed using build.sh baseline, and for Sulfur, the argument sulfur should be passed instead (see Step 4 
+of the Steps to Build and Run section in the README).
 
-After building, you will obtain the FVP terminals. In the FVP environment, you need to invoke the script located at /usr/bin/run.sh with the corresponding argument. The run.sh script included in the claim/ directory is copied into the FVP machine’s filesystem during setup and can then be used from /usr/bin/run.sh within the FVP machine. This will run the two benchmarks, lmbench and embench, under the selected configuration mode (see Step 5 of the Steps to Build and Run section in the README).
+After building, you will obtain the FVP terminals. In the FVP environment, you need to invoke the script located at /usr/bin/run.sh with 
+the corresponding argument. The run.sh script included in the claim/ directory is copied into the FVP machine’s filesystem during setup 
+and can then be used from /usr/bin/run.sh within the FVP machine. This will run the two benchmarks, lmbench and embench, under the 
+selected configuration mode (see Step 5 of the Steps to Build and Run section in the README).
 
 It is important to note that the results provided in the expected/ directory were obtained in the FVP environment, whereas the results
 presented in the paper were measured on a Raspberry Pi 3 B+ platform. Therefore, the performance numbers produced in FVP are not expected 
