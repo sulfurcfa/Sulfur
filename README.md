@@ -9,23 +9,35 @@ Please download the artifact zip from https://drive.usercontent.google.com/downl
 
 The archive is approximately 5 GB in size, so we were unable to upload it to GitHub.
 ### Step 1: Place the Artifact in the Project Directory
-Copy the downloaded ZIP file into the `Sulfur` project directory.
+This step copies the artifact.zip file into the project directory.
 ```bash
 cp ~/Downloads/artifact.zip ~/Sulfur/
 ```
-2. Give execute permissions to the build scripts:
+
+### Step 2: Make Scripts Executable
 ```bash
 chmod 777 install.sh
 chmod 777 build.sh
 ```
-3. Run the installer script to install all prerequisites.
+### Step 3: Install Prerequisites
+This step installs all the required prerequisites and unzips the artifact.zip into the project directory.
 ```bash
 sudo ./install.sh
 ```
-4. Run build.sh to build OPTEE and FVP. Invoke this script with either "baseline" or "sulfur" to build baseline and sulfur respectively.
+### Step 4: Build and Run FVP
+Running build.sh will build the required components (Linux, ARM Trusted Firmware, OP-TEE OS, etc.) depending on the selected mode.
+
+Baseline mode: Builds only the standard Linux system.
+Sulfur mode: Builds ARM Trusted Firmware, OP-TEE OS (Trusted Zone), and a modified Linux kernel.
+
+At the end of the build, the FVP terminals will be launched.
+
+Additionally, the artifact/ folder contains a run.sh script, which is copied into the FVP filesystem during setup. This script runs the two benchmarks: lmbench and embench.
+To build OP-TEE and FVP, run:
 
 ```bash
-sudo sh build.sh baseline/sulfur 
+sudo sh ./build.sh baseline   # for baseline mode
+sudo sh ./build.sh sulfur     # for sulfur mode
 ```
 
 5. The benchmarks can be run and tested via the FVP Xterminals. 
