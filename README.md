@@ -25,11 +25,12 @@ This step installs all the required prerequisites and unzips the artifact.zip in
 sudo ./install.sh
 ```
 ### Step 4: Build and Run FVP
-Running build.sh will build the required components (Linux, ARM Trusted Firmware, OP-TEE OS, etc.) depending on the selected mode.
+Running build.sh will build the required components.
 
-Baseline mode: Builds only the standard Linux system.
+Baseline mode: Builds the vanilla OP-TEE setup for FVP with the standard OP-TEE OS, ARM Trusted Firmware, and Linux kernel.
+Sulfur mode: Builds the OP-TEE setup for FVP with modified OP-TEE OS, ARM Trusted Firmware, and Linux kernel used in Sulfur.
 
-Sulfur mode: Builds ARM Trusted Firmware, OP-TEE OS (Trusted Zone), and a modified Linux kernel.
+
 
 At the end of the build, the FVP terminals will be launched.
 
