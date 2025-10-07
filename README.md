@@ -69,3 +69,19 @@ If a GUI is not available, you can still access these terminals via telnet. For 
 telnet localhost 5000
 ```
 After Linux boots, you can run this command in any terminal to access FVP terminal 0. If you are unable to access the Linux terminal on port 5000, try other ports such as 5001, 5002, or 5003.
+
+## Solution Patch and Explanation
+The issue arises due to two primary reasons. First, the project was compiled using Python 2, so please ensure that Python 2 is installed on your system. Second, all compiler warnings are currently treated as errors, which needs to be corrected so that warnings are treated as warnings only.
+
+To resolve this, please run the following commands. We will first remove the artifact folder and unzip it again to avoid any cached environment conflicts.
+
+It is assumed that you are currently in the Sulfur directory.
+```bash
+sudo rm -rf artifact
+sudo unzip artifact.zip
+cd artifact
+sudo sed -i 's/-Werror//g' edk2/BaseTools/Conf/tools_def.template edk2/BaseTools/Source/C/Makefiles/header.makefile
+cd ..
+```
+After completing these steps, you can proceed with Step 4 and onwards.
+
