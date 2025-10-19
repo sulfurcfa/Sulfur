@@ -85,12 +85,13 @@ cd ..
 ```
 After completing these steps, you can proceed with Step 4 and onwards.
 
-## Copying our Environment and sources.list
-Have to extract this zip and have to run this target,sh
+## Copying the Environment Configuration
+The provided package contains the required sources.list file and environment configuration.
+To apply the setup, extract the archive and execute the following commands:
 
 ```bash
-sudo chmod 777 target.sh
-sudo bash target.sh
+sudo chmod 777 envsetup.sh
+sudo bash envsetup.sh
 ```
 
 
