@@ -86,7 +86,7 @@ cd ..
 After completing these steps, you can proceed with Step 4 and onwards.
 
 ## Copying the Environment Configuration
-The provided package contains the required sources.list file and environment configuration.
+The provided environment.tgz contains the required sources.list file and environment configuration.
 To apply the setup, extract the archive and execute the following commands:
 
 ```bash
